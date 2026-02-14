@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-
+        //I had used a nested loop at the start but when I saw the complexity was too high I saw the solutions and saw that hash map was better so I solvedit again using Dictionary.
         static public int[] TwoSum(int[] nums, int target)
         {
             var temp = new Dictionary<int, int>();
@@ -27,4 +27,5 @@
 }
 
     
+
 
