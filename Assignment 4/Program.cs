@@ -172,10 +172,11 @@ namespace Assignment_4
                     break;
                 Console.WriteLine("Invalid PIN!");
             }
-            Interface(accounts[i]);
+            Console.WriteLine($"Welcome {accounts[i].getName()}!");
+            accounts[i] = Interface(accounts[i]);
 
         }
-        static void Interface(BankAccount account)
+        static BankAccount Interface(BankAccount account)
         {
             int choice;
             double amount;
@@ -217,7 +218,7 @@ namespace Assignment_4
                             account.Deposit(amount);
                             }; break;
                     case 4: Console.WriteLine(account.getTransaction());break;
-                    case 5: return;
+                    case 5: return account;
                     default: Console.WriteLine("Invalid Choice!"); break;
                 }
 
